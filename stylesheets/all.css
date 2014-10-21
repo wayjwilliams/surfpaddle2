@@ -1,0 +1,723 @@
+@charset "UTF-8";
+/* Bitters 0.10.0
+ * http://bitters.bourbon.io
+ * Copyright 2013–2014 thoughtbot, inc.
+ * MIT License */
+/* line 1, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/extends/_button.scss */
+button,
+input[type="submit"] {
+  -webkit-font-smoothing: antialiased;
+  background-color: #1a425c;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.75em 1em;
+  text-decoration: none; }
+  /* line 13, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/extends/_button.scss */
+  button:hover,
+  input[type="submit"]:hover {
+    background-color: #091720;
+    color: white; }
+  /* line 18, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/extends/_button.scss */
+  button:disabled,
+  input[type="submit"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+
+/* line 1, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: white;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.5; }
+
+/* line 10, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+  line-height: 1.25;
+  margin: 0;
+  text-rendering: optimizeLegibility; }
+
+/* line 22, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+h1 {
+  font-size: 2.25em; }
+
+/* line 26, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+h2 {
+  font-size: 2em; }
+
+/* line 30, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+h3 {
+  font-size: 1.75em; }
+
+/* line 34, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+h4 {
+  font-size: 1.5em; }
+
+/* line 38, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+h5 {
+  font-size: 1.25em; }
+
+/* line 42, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+h6 {
+  font-size: 1em; }
+
+/* line 46, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+p {
+  margin: 0 0 0.75em; }
+
+/* line 50, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+a {
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+  color: #1a425c;
+  text-decoration: none; }
+  /* line 55, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+  a:hover {
+    color: #091720; }
+  /* line 59, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+  a:active, a:focus {
+    color: #091720;
+    outline: none; }
+
+/* line 65, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+hr {
+  border-bottom: 1px solid #DDD;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0; }
+
+/* line 73, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+img,
+picture {
+  margin: 0;
+  max-width: 100%; }
+
+/* line 79, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+blockquote {
+  border-left: 2px solid #DDD;
+  color: #595959;
+  margin: 1.5em 0;
+  padding-left: 0.75em; }
+
+/* line 86, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+cite {
+  color: #737373;
+  font-style: italic; }
+  /* line 90, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_typography.scss */
+  cite:before {
+    content: "\2014 \00A0"; }
+
+/* line 1, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_forms.scss */
+fieldset {
+  background: #f7f7f7;
+  border: 1px solid #DDD;
+  margin: 0 0 0.75em 0;
+  padding: 1.5em; }
+
+/* line 8, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_forms.scss */
+input,
+label,
+select {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em; }
+
+/* line 16, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_forms.scss */
+label {
+  font-weight: bold;
+  margin-bottom: 0.375em; }
+  /* line 20, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_forms.scss */
+  label.required:after {
+    content: "*"; }
+  /* line 24, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_forms.scss */
+  label abbr {
+    display: none; }
+
+/* line 29, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_forms.scss */
+textarea,
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"],
+select[multiple=multiple] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: border-color;
+  -moz-transition: border-color;
+  transition: border-color;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #DDD;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em 0.5em;
+  width: 100%; }
+  /* line 44, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_forms.scss */
+  textarea:hover,
+  input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="url"]:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover,
+  select[multiple=multiple]:hover {
+    border-color: #c4c4c4; }
+  /* line 48, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_forms.scss */
+  textarea:focus,
+  input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
+  select[multiple=multiple]:focus {
+    border-color: #1a425c;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(20, 52, 72, 0.7);
+    outline: none; }
+
+/* line 55, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_forms.scss */
+textarea {
+  resize: vertical; }
+
+/* line 59, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+
+/* line 63, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em; }
+
+/* line 69, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_forms.scss */
+input[type="file"] {
+  padding-bottom: 0.75em;
+  width: 100%; }
+
+/* line 74, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_forms.scss */
+select {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  width: auto; }
+
+/* line 1, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_tables.scss */
+table {
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%; }
+
+/* line 8, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_tables.scss */
+th {
+  border-bottom: 1px solid #b7b7b7;
+  font-weight: bold;
+  padding: 0.75em 0;
+  text-align: left; }
+
+/* line 15, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_tables.scss */
+td {
+  border-bottom: 1px solid #DDD;
+  padding: 0.75em 0; }
+
+/* line 20, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_tables.scss */
+tr,
+td,
+th {
+  vertical-align: middle; }
+
+/* line 1, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_lists.scss */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+/* line 20, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_lists.scss */
+dl {
+  margin-bottom: 0.75em; }
+  /* line 23, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_lists.scss */
+  dl dt {
+    font-weight: bold;
+    margin-top: 0.75em; }
+  /* line 28, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_lists.scss */
+  dl dd {
+    margin: 0; }
+
+/* line 1, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/base/_buttons.scss */
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+
+/* line 2, /Library/Ruby/Gems/2.0.0/gems/neat-1.6.0/app/assets/stylesheets/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 5, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+.hero {
+  width: 1300px;
+  height: 524px;
+  background: linear-gradient(rgba(20, 118, 190, 0.6), rgba(22, 84, 143, 0.6)), url("../images/waves.jpg") center center no-repeat; }
+  /* line 13, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+  .hero .hero-inner {
+    text-transform: uppercase;
+    height: 524px;
+    margin: 0;
+    padding: 0; }
+    /* line 15, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+    .hero .hero-inner:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 19, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    .hero .hero-inner section {
+      width: 1030px;
+      margin: 0 auto; }
+      /* line 15, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+      .hero .hero-inner section:after {
+        content: "";
+        display: table;
+        clear: both; }
+    /* line 25, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    .hero .hero-inner section header {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      /* line 38, /Library/Ruby/Gems/2.0.0/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .hero .hero-inner section header:last-child {
+        margin-right: 0; }
+      /* line 27, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      .hero .hero-inner section header img {
+        margin: 0;
+        padding: 0;
+        margin: 6px 0 0 2px; }
+      /* line 28, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      .hero .hero-inner section header p.blog {
+        margin: -58px 0 0 60px;
+        font-weight: bold;
+        font-size: 1em;
+        line-spacing: 0; }
+    /* line 35, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    .hero .hero-inner section nav {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      text-align: right;
+      margin-top: 10px;
+      padding-right: 30px;
+      font-weight: bold;
+      font-size: 18px;
+      height: 30px;
+      padding-top: 7px; }
+      /* line 38, /Library/Ruby/Gems/2.0.0/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .hero .hero-inner section nav:last-child {
+        margin-right: 0; }
+      /* line 44, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      .hero .hero-inner section nav ul li {
+        display: inline;
+        padding-left: 0px;
+        font-family: 'Oswald';
+        font-weight: 700; }
+      /* line 50, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      .hero .hero-inner section nav ul li:nth-child(1) {
+        margin-right: 10px; }
+      /* line 53, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      .hero .hero-inner section nav ul li:nth-child(3) {
+        height: 17px;
+        width: 15px; }
+    /* line 58, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    .hero .hero-inner h1 {
+      font-size: 111px;
+      line-height: 60px;
+      margin: 202px 0 0 0;
+      text-align: center;
+      font-family: 'myriad pro';
+      font-weight: normal;
+      color: white; }
+    /* line 67, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    .hero .hero-inner h2 {
+      font-family: 'Open Sans';
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      text-transform: capitalize;
+      font-size: 14px;
+      margin-top: 8px;
+      font-weight: 700; }
+
+/* line 79, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+footer.mainfooter {
+  display: block;
+  margin-top: 5px; }
+  /* line 83, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+  footer.mainfooter header h1 {
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 65px;
+    font-weight: 400;
+    padding: 4px;
+    color: #06324d; }
+  /* line 92, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+  footer.mainfooter section.footer4imageslink {
+    margin-top: 30px; }
+    /* line 94, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    footer.mainfooter section.footer4imageslink a.tint325x332 {
+      position: relative;
+      cursor: pointer;
+      width: 325px;
+      height: 332px;
+      padding: 0;
+      margin: 0;
+      float: left;
+      transition: all 0.5s ease; }
+    /* line 102, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    footer.mainfooter section.footer4imageslink a.tint325x332:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(20, 118, 190, 0.5);
+      -moz-transition: all .3s linear;
+      -webkit-transition: all .3s linear;
+      -ms-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      transition: all .3s linear; }
+    /* line 117, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    footer.mainfooter section.footer4imageslink a.tint325x332:hover:before {
+      background: none; }
+    /* line 120, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    footer.mainfooter section.footer4imageslink img {
+      width: 325px;
+      height: 332px; }
+  /* line 124, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+  footer.mainfooter div.footeroffooter {
+    display: block;
+    font-weight: 700;
+    width: 100%;
+    background: #083352; }
+    /* line 129, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    footer.mainfooter div.footeroffooter section.brandcopyright {
+      width: 60%;
+      float: left;
+      background: #083352;
+      height: 90px; }
+      /* line 134, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      footer.mainfooter div.footeroffooter section.brandcopyright img.ironyardlogo {
+        margin: 10px 0 0 151px;
+        float: left; }
+      /* line 138, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      footer.mainfooter div.footeroffooter section.brandcopyright small.copyright {
+        float: left;
+        font-size: 12.5px;
+        margin: 37px 0 0 5px;
+        color: #a1bcd1; }
+    /* line 145, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    footer.mainfooter div.footeroffooter nav.footernav {
+      background: #083352;
+      width: 40%;
+      float: left;
+      padding: 32px;
+      height: 90px; }
+      /* line 151, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      footer.mainfooter div.footeroffooter nav.footernav ul li {
+        display: inline;
+        color: #a1bcd1; }
+        /* line 154, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+        footer.mainfooter div.footeroffooter nav.footernav ul li a {
+          font-size: 13px;
+          color: #a1bcd1; }
+
+/* line 163, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+body {
+  margin: 0;
+  margin: 0 auto;
+  width: 1300px; }
+
+/* line 169, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+#maincontent {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0;
+  padding: 0;
+  margin: 60px auto;
+  height: 900px; }
+  /* line 15, /Library/Ruby/Gems/2.0.0/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+  #maincontent:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 175, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+  #maincontent article.mainarticle {
+    width: 620px;
+    margin-left: 56px;
+    float: left;
+    height: 790px; }
+    /* line 181, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    #maincontent article.mainarticle h1 {
+      text-transform: uppercase;
+      font-size: 3.9em;
+      line-height: 1.15em;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400; }
+    /* line 188, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    #maincontent article.mainarticle .byline {
+      padding: .3em .2em;
+      display: block;
+      height: 60px;
+      margin-bottom: 2px; }
+      /* line 193, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent article.mainarticle .byline .author {
+        float: left;
+        padding: 0; }
+      /* line 198, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent article.mainarticle .byline .author
+      div.tint {
+        position: relative;
+        float: left;
+        cursor: pointer;
+        width: 23px;
+        height: 23px;
+        margin-right: .4em; }
+      /* line 206, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent article.mainarticle .byline div.tint:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 50%;
+        background: rgba(20, 118, 190, 0.5);
+        -moz-transition: background .3s linear;
+        -webkit-transition: background .3s linear;
+        -o-transition: background .3s linear;
+        transition: background .3s linear; }
+      /* line 221, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent article.mainarticle .byline img {
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        margin-right: .4em;
+        background: linear-gradient(rgba(20, 118, 190, 0.9), rgba(22, 84, 143, 0.9)); }
+      /* line 229, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent article.mainarticle .byline .author a {
+        font-size: 12px;
+        font-weight: 700;
+        font-style: normal; }
+        /* line 234, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+        #maincontent article.mainarticle .byline .author a .name {
+          padding: 0;
+          display: block;
+          margin: auto 3px;
+          float: right;
+          padding-top: 5px; }
+      /* line 241, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent article.mainarticle .byline .date {
+        font-weight: 700;
+        margin-left: 9px;
+        float: left;
+        font-size: .8em;
+        padding-top: 5px; }
+      /* line 248, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent article.mainarticle .byline time {
+        text-decoration: underline; }
+    /* line 253, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    #maincontent article.mainarticle section.articlecontent p {
+      font-weight: 700;
+      line-height: 26px;
+      margin-bottom: 25px;
+      color: #aaafb3; }
+    /* line 259, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    #maincontent article.mainarticle section.articlecontent blockquote {
+      text-transform: uppercase;
+      font-size: 26px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+      padding: 10px .8em;
+      margin-left: 5px;
+      margin-bottom: 25px;
+      border-left: 2px gray solid;
+      color: #5b98c5; }
+    /* line 272, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    #maincontent article.mainarticle section.commentsshare ul {
+      display: block;
+      height: 30px;
+      float: left;
+      margin-left: 4px; }
+      /* line 278, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent article.mainarticle section.commentsshare ul li {
+        display: block;
+        float: left;
+        margin-right: 5px; }
+        /* line 282, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+        #maincontent article.mainarticle section.commentsshare ul li img {
+          margin: 7px 0 0 9px; }
+        /* line 285, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+        #maincontent article.mainarticle section.commentsshare ul li p {
+          color: white;
+          font-size: 12px;
+          font-weight: 700;
+          margin: 5px auto;
+          padding: 0 9px; }
+      /* line 293, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent article.mainarticle section.commentsshare ul li:nth-child(1) {
+        background: #5b666c;
+        width: 33px;
+        height: 30px; }
+    /* line 299, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    #maincontent article.mainarticle section.commentsshare ul.readcomments {
+      background: #a3b3c2; }
+    /* line 302, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    #maincontent article.mainarticle section.commentsshare ul.readlater {
+      background: #a3b3c2;
+      margin-left: 10px; }
+      /* line 305, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent article.mainarticle section.commentsshare ul.readlater li:nth-child(2) {
+        width: 85px; }
+    /* line 309, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    #maincontent article.mainarticle section.commentsshare ul.sharelater {
+      background: #1371b9;
+      margin-left: 10px; }
+      /* line 312, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent article.mainarticle section.commentsshare ul.sharelater li:nth-child(1) {
+        background: #123752; }
+      /* line 316, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent article.mainarticle section.commentsshare ul.sharelater li:nth-child(2) p {
+        padding-right: 11px; }
+  /* line 323, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+  #maincontent aside {
+    width: 280px;
+    float: right;
+    margin-right: 52px;
+    height: 890px; }
+    /* line 329, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+    #maincontent aside section.authoraside {
+      width: 100%; }
+      /* line 331, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent aside section.authoraside div.tint {
+        position: relative;
+        cursor: pointer;
+        width: 85px;
+        height: 85px;
+        margin: 0 auto;
+        margin-top: 22px;
+        margin-bottom: 11px; }
+      /* line 339, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent aside section.authoraside div.tint:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 50%;
+        background: rgba(20, 118, 190, 0.5);
+        -moz-transition: background .3s linear;
+        -webkit-transition: background .3s linear;
+        -o-transition: background .3s linear;
+        transition: background .3s linear; }
+      /* line 354, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent aside section.authoraside img.asideprofile {
+        display: block;
+        margin: 0px auto;
+        margin-top: 22px;
+        margin-bottom: 11px;
+        width: 85px;
+        height: 85px;
+        border-radius: 50%; }
+      /* line 362, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent aside section.authoraside h1 {
+        text-transform: uppercase;
+        font-family: 'open sans';
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+        color: #5b98c5; }
+      /* line 370, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent aside section.authoraside ul.asidesocialmedia {
+        width: 99%;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 3px; }
+        /* line 377, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+        #maincontent aside section.authoraside ul.asidesocialmedia li {
+          display: inline;
+          padding: 0 8px; }
+          /* line 380, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+          #maincontent aside section.authoraside ul.asidesocialmedia li a {
+            margin: 0;
+            padding: 0; }
+      /* line 386, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent aside section.authoraside div.tint280x300 {
+        position: relative;
+        cursor: pointer;
+        width: 280px;
+        height: 300px;
+        margin-top: 51px; }
+      /* line 392, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent aside section.authoraside div.tint280x300:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(20, 118, 190, 0.5);
+        -moz-transition: background .3s linear;
+        -webkit-transition: background .3s linear;
+        -o-transition: background .3s linear;
+        transition: background .3s linear; }
+      /* line 409, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent aside section.authoraside .asideadlink {
+        width: 100%;
+        float: right;
+        text-align: right;
+        text-decoration: underline;
+        font-size: 12px;
+        font-weight: 700;
+        padding-right: 2px; }
+      /* line 419, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent aside section.authoraside article.asidearticle h2 {
+        text-transform: uppercase;
+        margin-top: 65px;
+        font-size: 17px;
+        font-weight: 700;
+        color: #5b98c5; }
+      /* line 426, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+      #maincontent aside section.authoraside article.asidearticle p {
+        margin-top: 6px;
+        line-height: 24px;
+        font-weight: 600;
+        font-size: 14px; }
+
+/* line 436, /Users/jaredwilliams/ruby/day20/surfpaddle2/source/stylesheets/all.css.scss */
+.hrdivider {
+  margin-top: -11px; }
